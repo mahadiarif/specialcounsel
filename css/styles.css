@@ -1,0 +1,2039 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins-SemiBold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins-Regular.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+/* 2 - Normalize */
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    scroll-behavior: smooth;
+}
+/* Sections
+     ========================================================================== */
+/**
+   * Remove the margin in all browsers.
+   */
+body {
+    margin: 0;
+}
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+/* Grouping content
+     ========================================================================== */
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+}
+.copy-container hr {
+    color: #BBBEBF;
+    border-bottom: 0;
+}
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+a {
+    background-color: transparent;
+    transition: color .3s ease-in-out;
+    color: #018FB5;
+}
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+}
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+b, strong {
+    font-weight: bolder;
+}
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+code, kbd, samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+    font-size: 80%;
+}
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sub {
+    bottom: -0.25em;
+}
+sup {
+    top: -0.5em;
+}
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+img {
+    border-style: none;
+    max-width: 100%;
+}
+/* Forms
+     ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button, input, optgroup, select, textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+}
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button, input { /* 1 */
+    overflow: visible;
+}
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+button, select { /* 1 */
+    text-transform: none;
+}
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+button, [type="button"], [type="reset"], [type="submit"] {
+    -webkit-appearance: button;
+}
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+/**
+   * Correct the padding in Firefox.
+   */
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+}
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+progress {
+    vertical-align: baseline;
+}
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+textarea {
+    overflow: auto;
+}
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+[type="checkbox"], [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+}
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+}
+/* Interactive
+     ========================================================================== */
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+details {
+    display: block;
+}
+/*
+   * Add the correct display in all browsers.
+   */
+summary {
+    display: list-item;
+}
+/* Misc
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10+.
+   */
+template {
+    display: none;
+}
+   * Add the correct display in IE 10.
+   */
+[hidden], .hidden {
+    display: none;
+}
+.show {
+    display: block !important;
+}
+* {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 2rem;
+}
+.copy-container {
+    max-width: 840px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 3.4rem;
+    padding: 2rem;
+}
+.copy-container ul {
+    padding-left: 3rem;
+    list-style: disc;
+}
+.copy-container li {
+    margin-bottom: 1rem;
+}
+.align-left {
+    float: left;
+    margin-right: 2rem;
+}
+.align-right {
+    float: right;
+    margin-left: 2rem;
+}
+.align-center {
+    display: block;
+    margin: 0 auto;
+}
+.text-align-left {
+    text-align: left;
+}
+.text-align-right {
+    text-align: right;
+}
+.text-align-center {
+    text-align: center;
+}
+/* 3 - Default Font styles */
+html {
+    font-size: 62.5%;
+    background-color: #F4F4F4;
+}
+body {
+    font-family: "poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+    font-family: "baskerville-urw", serif;
+    font-weight: normal;
+}
+h1, .h1 {
+    font-size: 4.5rem;
+    line-height: 5.1rem;
+}
+h2, .h2 {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+}
+h3, .h3 {
+    font-size: 2.4rem;
+}
+h4, .h4 {
+    font-size: 2rem;
+}
+h1, .h1, h2, .h2, h4, .h4 {
+    font-style: italic;
+}
+[class^="underline-"] {
+    background-size: 100% 1.12em;
+    display: inline;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+.text-center {
+    text-align: center;
+}
+.micro-copy {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+}
+.site-header .main-nav-links > li {
+    font-family: "baskerville-urw", serif;
+    font-weight: normal;
+    font-size: 2rem;
+}
+.site-header .sub-nav > li {
+    font-weight: 700;
+}
+.site-header .utility-nav {
+    font-weight: 300;
+    font-size: 1.1rem;
+    letter-spacing: 0.06em;
+}
+.site-header img
+{
+    width: 30px;
+    margin-left: 15px;
+}
+.site-header .utility-nav li {
+    padding: 0 0.6rem;
+}
+/*Cpmtact Form Code*/
+/* 5 - Global Components */
+.overley{
+    background-color: rgb(0, 0, 0,0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* site-header */
+.site-header {
+    background: #cdcdcd;
+	color: rgba(0,0,0,.55);
+    z-index: 9;
+}
+.id-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 3rem;
+	
+}
+.id-row .utility-nav {
+    display: none;
+    visibility: hidden;
+    transition: visibility 0.3s ease;
+}
+.id-row a {
+    color: rgba(0,0,0,.55);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.id-row .utility-nav a {
+    color: rgba(0,0,0,.55);
+}
+.id-row .utility-nav a:hover {
+    color: #FFFFFF;
+}
+.site-logo-link {
+    display: block;
+}
+.site-logo {
+    max-width: 140px!important;
+}
+.site-logo-icon {
+    display: none;
+}
+.sticky .site-logo-icon {
+    display: block;
+}
+.mobile-nav-button {
+    background: url('../img/logo.png') no-repeat;
+    background-size: cover;
+    height: 15px;
+    width: 18px;
+    border: none;
+    display: block;
+    padding: 0;
+    cursor: pointer;
+}
+.site-nav-wrap {
+    width: 80%;
+    position: absolute;
+    background-color: #232c34;
+    display: none;
+}
+.site-nav-wrap ul {
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.site-nav-wrap a {
+    color:rgba(0,0,0,.55);
+    text-decoration: none;
+}
+.site-nav-wrap a:hover, .site-nav-wrap a:focus {
+    color: #fff;
+}
+.main-nav a {
+    display: inline-block;
+}
+.main-nav-links > li > a {
+    border-bottom: 1px solid #656B71;
+    display: block;
+    line-height: 3;
+}
+.main-nav .sub-nav {
+    background-color: #394148;
+    display: none;
+}
+.main-nav .sub-nav a {
+    font-family: "poppins", sans-serif;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    font-weight: 500;
+}
+.nav-cta {
+    text-align: center;
+}
+.main-nav .utility-nav > ul {
+    border-top: 1px solid #919599;
+}
+.main-nav a, .main-nav .utility-nav {
+    padding: 1rem;
+}
+.main-nav li .icon {
+    display: none;
+}
+.mobile-sticky .main-nav-links li button {
+    display: block;
+    border: none !important;
+    -webkit-appearance: none;
+}
+.site-header .utility-nav li.site-search {
+    border-left: 1px solid #DBDDDD;/*! height:  100%; */padding-left: 1.3rem;
+    margin-left: 3rem;
+}
+.site-header .search-open.utility-nav li.site-search {
+    border-left: 0;
+}
+.site-search div.icon {
+    position: relative;
+}
+
+.search-open .site-search i.icon {
+    left: 1rem;
+    top: 0.7rem;
+}
+.site-search .prompt {
+    display: block;
+    transition: width 0.3s, opacity 0.3s ease-in-out;
+    width: 0;
+    opacity: 0;
+    float: right;
+    background-color: #778793;
+    color: #DBDDDD;
+    line-height: 2.3rem;
+    border-radius: 1rem;
+    border: 0;
+}
+.site-search .prompt::placeholder {
+    color: #DBDDDD
+}
+.search-open .site-search .prompt {
+    width: 38.7rem;
+    opacity: 1;
+    padding: 0.3rem 1rem 0.3rem 3.8rem;
+}
+.search-results .page-title, .search-results .page-title + p {
+    display: none;
+}
+.search-results .search-box {
+    max-width: 83rem;
+    margin: 0 auto;
+    padding-bottom: 7rem;
+}
+.search-results .main-content, .search-results .search-box {
+    background-color: #fff;
+}
+.search-results .search-box > .gs-title {
+    padding: 2rem 0 3rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #9AA4AA;
+}
+.id-row .utility-nav.search-open li:not(.site-search) {
+    visibility: hidden;
+}
+/* 6 - buttons */
+[class^='button'], .locator__aside--details .btn-success, .bios-wrap .contact-card a {
+    display: block;
+    border-radius: 2em;
+    padding: 1.2em 1em 1em;
+    width: 100%;
+    margin: 0 auto 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    border-style: solid;
+    border-width: 2px;
+    border-color: inherit;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    max-width: 90%;
+    letter-spacing: 0.1em;
+    transition: .3s all ease-in-out;
+    cursor: pointer;
+}
+.button-yellow, .bios-wrap .contact-card a, div.event-form .scfSubmitButton {
+    background-color: rgba(255, 227, 127, 0.8);
+    border: 2px solid #fff;
+    color: #2C4154;
+}
+.button-yellow:hover, .button-yellow:active, .bios-wrap .contact-card a:hover, .bios-wrap .contact-card a:active, div.event-form .scfSubmitButton:hover, div.event-form .scfSubmitButton:focus {
+    background-color: rgba(255, 227, 127, 1);
+}
+.button-tp {
+    border-color: #5C6D7C;
+    color: #2C4154;
+}
+.button-tp:hover, .button-tp:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.button-tp-white {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+.button-tp-white:hover, .button-tp-white:focus {
+    background-color: #2F3F4D;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.button-grey {
+    background-color: #849CA6;
+    color: #fff;
+}
+.button-grey:hover, .button-grey:focus {
+    background-color: #6A8692;
+}
+.button-blue, .locator__aside--details .btn-success {
+    background-color: #00A6CC;
+    color: #fff;
+    border-color: #00A6CC;
+}
+.locator__aside--details .btn-success {
+    font-size: 1.2rem;
+}
+.button-blue:hover, .button-blue:focus, .locator__aside--details .btn-success:hover, .locator__aside--details .btn-success:focus {
+    background-color: #018FB5;
+    border-color: #018FB5;
+}
+.button-white {
+    background-color: #fff;
+    border: 0.14em solid #fff;
+    color: #455462 !important;
+}
+.button-white:hover, .button-white:focus {
+    background-color: #455462;
+    color: #fff !important;
+}
+
+/* site footer */
+.site-footer {
+    background-color: #cdcdcd;
+    color: rgba(0, 0, 0, 0.665);
+    width: 100%;
+    height: 100px;
+}
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 7 - Page Components */
+/* page header */
+.page-header {
+    position: relative;
+    background-color: #455463/*#A4ACB3*/;
+    color: #fff;
+    padding: 2.2rem 2.2rem 6rem;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+.underline-sci {/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9aa4aa+0,9aa4aa+100&0+0,0+67,0.8+68,0.8+85,0+86 */
+    background: -moz-linear-gradient(top, rgba(154, 164, 170, 0) 0%, rgba(154, 164, 170, 0) 67%, rgba(154, 164, 170, 0.8) 68%, rgba(154, 164, 170, 0.8) 85%, rgba(154, 164, 170, 0) 86%, rgba(154, 164, 170, 0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(154, 164, 170, 0) 0%, rgba(154, 164, 170, 0) 67%, rgba(154, 164, 170, 0.8) 68%, rgba(154, 164, 170, 0.8) 85%, rgba(154, 164, 170, 0) 86%, rgba(154, 164, 170, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(154, 164, 170, 0) 0%, rgba(154, 164, 170, 0) 67%, rgba(154, 164, 170, 0.8) 68%, rgba(154, 164, 170, 0.8) 85%, rgba(154, 164, 170, 0) 86%, rgba(154, 164, 170, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#009aa4aa', endColorstr='#009aa4aa', GradientType=0); /* IE6-9 */
+}
+.page-header.pll { /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c3996c+0,606d73+100 */
+    background: rgb(195, 153, 108); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(195, 153, 108, 1) 0%, rgba(96, 109, 115, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(195, 153, 108, 1) 0%, rgba(96, 109, 115, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(195, 153, 108, 1) 0%, rgba(96, 109, 115, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#c3996c', endColorstr='#606d73', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+}
+.page-header.d4 {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#069347+0,606d73+100 */
+    background: rgb(6, 147, 71); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(6, 147, 71, 1) 0%, rgba(96, 109, 115, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(6, 147, 71, 1) 0%, rgba(96, 109, 115, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(6, 147, 71, 1) 0%, rgba(96, 109, 115, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#069347', endColorstr='#606d73', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+}
+.page-header.sci {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#682c86+0,606d73+100 */
+    background: rgb(104, 44, 134); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(104, 44, 134, 1) 0%, rgba(96, 109, 115, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(104, 44, 134, 1) 0%, rgba(96, 109, 115, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(104, 44, 134, 1) 0%, rgba(96, 109, 115, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#682c86', endColorstr='#606d73', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+}
+.page-header.eq {
+    /*Swapped from  rgba(96,109,115,1) -  rgba(153,153,153,1)*/
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#018fb5+0,606d73+100 */
+    background: rgb(1, 143, 181); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(1, 143, 181, 1) 0%, rgba(153, 153, 153, 1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(1, 143, 181, 1) 0%, rgbargba(153, 153, 153, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(1, 143, 181, 1) 0%, rgba(153, 153, 153, 1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#018fb5', endColorstr='#606d73', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+}
+.resources-header, .events .page-header {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5c6d7c+0,3f4d5a+100 */
+    background: #5c6d7c; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #5c6d7c 0%, #3f4d5a 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #5c6d7c 0%, #3f4d5a 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #5c6d7c 0%, #3f4d5a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#5c6d7c', endColorstr='#3f4d5a', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+}
+.page-header [class^="button"] + [class^="button"] {
+    margin-left: 2.6rem;
+}
+.flickity-slider .page-header {
+    background-size: cover;
+}
+.page-header h1, .page-header .title {
+    font-family: "baskerville-urw", serif;
+    position: relative;
+    display: inline-block;
+    font-style: italic;
+    font-size: 4.5rem;
+    line-height: 5.1rem;
+    margin-bottom: 1rem;
+    padding-top: 80px;
+}
+.page-header .header-logo {
+    margin: 0 auto 0;
+}
+.browse-all-jobs-wrap {
+    display: none;
+    background: #778793;
+    text-align: center;
+    padding: 2rem 2rem 4rem
+}
+.browse-all-jobs-wrap a {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    letter-spacing: 0.1em;
+}
+.page-header .dropdown-menu {
+    background: #fff;
+    margin: 0;
+    padding: 2rem;
+    position: absolute;
+}
+.page-header .dropdown-menu li {
+    margin-bottom: 1em;
+}
+.page-header .dropdown-menu li a {
+    text-decoration: none;
+}
+.browse-all-jobs-list a::after {
+    content: "\00BB";
+    display: inline-block;
+    margin-left: 0.4em;
+}
+/* SCI Background - text and image block */
+.sci-bg .overley .content-area {
+    line-height: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.job-header .location {
+    font-style: italic;
+    padding: 0px 200px;
+}
+/*::::::::::::::::: Connect-Project ::::::::::::::::*/
+.full-bg-cta {
+    position: relative;
+    text-align: center;
+    background: url('../img/connect-project-bg.jpg') no-repeat center #e7e9e6;
+    background-size: cover;
+    padding: 8rem 2rem 22rem;
+	height:600px;
+}
+.full-bg-cta .overley
+{
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.full-bg-cta .overley p {
+    margin-bottom: 4rem;
+}
+.full-bg-cta .overley .section-title, .full-bg-cta p {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+/* Resource Listing */
+.resource-listing-wrap {
+    padding: 2rem;
+}
+.resource-listing-wrap .resource-entry {
+    margin-bottom: 2rem;
+}
+#resource_listing {
+    min-height: 126rem;
+}
+#resource_listing .listing__navigation {
+    display: none;
+}
+#resource_listing .listing__results {
+    padding: 0 2rem 2rem;
+}
+#resource_listing .listing__result {
+    background-color: #fff;
+    box-shadow: 0rem 0.7rem 0.7rem 0rem rgba(0, 0, 0, 0.2);
+}
+#listingResultsCollection {
+    position: relative;
+}
+#resource_listing .no-resource-result {
+        background-image: url('/~/media/AdeccoGroup/Brands/SpecialCounsel Brand/USA/images/content/resources/no-results.png');
+        background-size: contain;
+        background-position: right center;
+        background-repeat: no-repeat;
+        height: 85rem;
+        position: absolute;
+
+    }
+
+/* Non-gated resource details page */
+.non-gated-resource {
+    background-color: #fff;
+}
+.non-gated-resource .listing__navigation, .non-gated-resource .row > hr, .non-gated-resource .resource__nav--search, .non-gated-resource .article__description {
+    display: none;
+}
+.non-gated-resource .article__name {
+    color: #778793;
+    text-align: center;
+}
+.non-gated-resource .article__content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 16rem;
+    max-width: 60rem;
+    color: #232323;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+.non-gated-resource .similar__articles {
+    display: none;
+}
+.non-gated-resource .header-image {
+    height: 25.6rem;
+    background-size: cover;
+    background-position: center;
+    margin: -15rem auto 0;
+}
+
+/* Resource Carousel */
+/* Resource Carousel */
+
+/* Trusted by Brands - Brand list */
+.trusted-by-bar {
+    text-align: center;
+    padding: 3.2rem 0;
+    background-color: #fff;
+}
+.trusted-by-bar .title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    letter-spacing: .1em;
+    color: #b1b1b1;
+    border-bottom: 1px solid #b2b2b2;
+    font-family: "poppins", sans-serif;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 1rem auto 2.2rem;
+    padding: 0 0.3em;
+}
+.trusted-brand-list {
+    list-style: none;
+    padding-left: 0;
+}
+.trusted-brand-list li {
+    display: block;
+    height: 34px;
+    background: url('/-/media/adeccogroup/brands/specialcounsel-brand/usa/images/logos/trusted-by-brands.png') no-repeat center;
+    background-size: auto 34px;
+    text-indent: 2000px;
+    overflow: hidden;
+    margin: 0 1rem 0 2rem;
+}
+.trusted-brand-list .ubounce {
+    width: 88px;
+    background-position: left center;
+}
+.trusted-brand-list .nintendo {
+    width: 125px;
+    background-position: -140px center;
+}
+.trusted-brand-list .microsoft {
+    width: 140px;
+    background-position: -314px center;
+}
+.trusted-brand-list .invision {
+    width: 110px;
+    background-position: -502px center;
+}
+.trusted-brand-list .intuit {
+    width: 104px;
+    background-position: -661px center;
+}
+.trusted-brand-list .ustream {
+    width: 115px;
+    background-position: -800px center;
+}
+.trusted-brand-list .autodesk {
+    width: 154px;
+    background-position: -952px center;
+}
+/* Call to Actions - Blog */
+.cta-simple {
+    text-align: center;
+    padding: 2rem;
+}
+.cta-simple p {
+    font-size: 3.6rem;
+    line-height: 4.5rem;
+    font-family: "baskerville-urw", serif;
+    font-style: italic;
+}
+/* Call to Actions - CTAs */
+.cta-main {
+    text-align: center;
+    padding: 2rem;
+}
+.cta-main p {
+    font-size: 3.6rem;
+    line-height: 4.5rem;
+    font-family: "baskerville-urw", serif;
+}
+/* resource category tags */
+.resource-card {
+    text-decoration: none;
+}
+[class^='cat-'], .listing__type[class*="type-"], .resource-card .listing__type, .resource-details .type-sales-sheets {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.4em 1.2em 0.3em;
+    letter-spacing: 0.18em;
+    display: inline-block;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: #fff;
+    background-color: #5C6D7C;
+}
+.cat-whitepaper, span.type-whitepaper, .listing__type.type-salary-guide {
+    color: #fff;
+    background-color: #5C6D7C;
+}
+.page-header .parent-cat {
+    background-color: #fff;
+    letter-spacing: 0.15em;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.25em 2em 0.015em 2em;/*0.6em 2em;*/
+}
+.eq .parent-cat {
+    color: #018FB5;
+}
+.pll .parent-cat {
+    color: #C3996C;
+}
+.sci .parent-cat {
+    color: #682C86;
+}
+.d4 .parent-cat {
+    color: #069347;
+}
+.info-image-block {
+    background-color: #fff;
+    box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.15);
+    max-width: 1150px;
+    margin: 0 auto 2rem;
+    display: flex;
+    transition: box-shadow .3s ease-in-out;
+}
+.info-image-block:hover, .info-image-block:focus {
+    box-shadow: 0rem 1rem 0.7rem 0rem rgba(0, 0, 0, 0.2);
+}
+.page-header + .info-image-block {
+    margin-top: 3.4rem;
+}
+.info-image-block .image-area {
+    flex-grow: 1;
+    width: 100%;
+    background-position: 28% center;
+    background-size: cover;
+}
+.info-image-block .content-area {
+    flex-grow: 2;
+    padding: 2rem 3.6rem 3.4rem 2.6rem;
+    max-width: 66%;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+.general-section {
+    padding: 5rem 2rem;
+}
+.general-section .title {
+    text-align: center;
+}
+.link-list {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 3rem auto;
+}
+.link-list a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 4.4rem;
+}
+.info-image-block .title {
+    line-height: 3.6rem;
+}
+a.info-image-block .title {
+    color: #000;
+}
+a.info-image-block {
+    text-decoration: none;
+}
+a.info-image-block p {
+    color: #000;
+}
+.info-image-block .read-more-link {
+    display: block;
+    margin-top: 2.8rem
+}
+
+/* Forms */
+
+.page-main .scfForm {
+    font-family: "poppins", sans-serif;
+}
+.page-main .tel-consent-details {
+    padding-left: 1rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 2rem 0 3rem;
+} 
+.page-main .tel-consent-details ol {
+    border-left: 2px solid #5C6D7C;
+    display: none;
+}
+
+.page-main .scfCheckbox  {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-block-eq .read-more-link {
+    color: #018FB5
+}
+.about-block-pll .read-more-link {
+    color: #C3996C;
+}
+.about-block-sci .read-more-link {
+    color: #682C86;
+}
+.about-block-d4 .read-more-link {
+    color: #069347;
+}
+.header-nav {
+    background-color: #778793;
+    padding: 1.8rem 0;
+}
+.header-nav ul {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.header-nav li {
+    text-align: center;
+    display: inline-block;
+    width: 33%;
+}
+/*.header-nav a { text-decoration: none; text-transform: uppercase; color: #fff; opacity: 0.8; font-weight: 700; font-size: 1.3rem; line-height: 5rem; border-left: 1px solid #A1A1A1; display: block; padding: 0 5.5rem; }*/
+.header-nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.8;
+    font-weight: 700;
+    font-size: 1.3rem;
+    border-left: 1px solid #A1A1A1;
+    display: block;
+    line-height: 2.5rem;
+    padding: 0;
+}
+.header-nav li:first-child a {
+    border-left: 0;
+}
+.header-nav a:hover, .header-nav a.active {
+    text-decoration: underline;
+    opacity: 1;
+}
+/* 8 - Page Specific Styles */
+/* Banner */
+.page-header {
+    background: url('../img/homepage.jpg') no-repeat center;
+    background-size: cover;
+	height:600px;
+}
+.help-you-succeed .container {
+    max-width: 94.4rem;
+}
+
+ 
+.attorney-recruiting {
+    position: relative;
+    text-align: center;
+    height: 600px;
+    background: url('../img/attorney-recruiting-bg.jpg') no-repeat center;
+    background-size: auto;
+    background-size: cover;
+    padding: 4rem 2rem 22rem;
+}
+.attorney-recruiting .row
+{
+    margin-top: 40px;
+    display: flex;
+    padding: 0px 80px;
+    justify-content: space-between;
+}
+.attorney-recruiting .hd h2
+{
+    color: white;
+    padding-top: 80px;
+}
+.attorney-recruiting .column1
+{
+   width: 300px;
+}
+.attorney-recruiting .column1 h4, .column2 h4, .column3 h4
+{
+   font-size: 20px;
+   color: white;
+}
+.attorney-recruiting .column1 p, .column2 p, .column3 p
+{
+   font-size: 15px;
+   color: white;
+}
+.attorney-recruiting .column2
+{
+    margin-right: 30px;
+    width: 300px;
+}
+.attorney-recruiting .column3
+{
+    width: 300px;
+}
+.bg-legal-talent {
+    position: relative;
+    text-align: center;
+    height: 600px;
+    background: url('../img/legal-talent.jpg') no-repeat center;
+    background-size: auto;
+    background-size: cover;
+    padding: 8rem 2rem 22rem;
+}
+.bg-legal-talent .overley{
+    background-color: rgb(0, 0, 0,0.7);
+}
+.bg-legal-talent .row
+{
+    margin-top: 40px;
+    display: flex;
+    padding: 0px 80px;
+    justify-content: space-between;
+}
+.bg-legal-talent .hd h2
+{
+    color: white;
+    padding-top: 80px;
+}
+.bg-legal-talent .column1
+{
+   width: 300px;
+}
+.bg-legal-talent .column1 h4, .column2 h4, .column3 h4
+{
+   font-size: 20px;
+   color: white;
+}
+.bg-legal-talent .column1 p, .column2 p, .column3 p
+{
+   font-size: 15px;
+   color: white;
+}
+.bg-legal-talent .column2
+{
+    margin-right: 30px;
+    width: 300px;
+}
+.bg-legal-talent .column3
+{
+    width: 300px;
+}
+.bg-outsourcing {
+    position: relative;
+    text-align: center;
+    height: 600px;
+    background: url('../img/outsourcing.jpg') no-repeat center;
+    background-size: auto;
+    background-size: cover;
+    padding: 4rem 2rem 22rem;
+}
+.bg-outsourcing .overley {
+    background-color: rgba(0, 0, 0, 0.72);
+}
+.bg-outsourcing .row
+{
+    margin-top: 40px;
+    display: flex;
+    padding: 0px 80px;
+    justify-content: space-between;
+}
+.bg-outsourcing .row-text {
+    margin-top: 40px;
+    font-size: 15px;
+    color: white;
+    width: 100%;
+    padding: 0px 200px;}
+.bg-outsourcing .hd h2 {
+    margin-top: 200px;
+    color: white;
+    font-size: 30px;
+}
+.bg-outsourcing .column1
+{
+   width: 250px;
+}
+.bg-e-discovery-service {
+    position: relative;
+    text-align: center;
+    height: 600px;
+    background: url('../img/e-discover-service.jpg') no-repeat center;
+    background-size: auto;
+    background-size: cover;
+    padding: 4rem 2rem 22rem;
+}
+.bg-e-discovery-service .row
+{
+    margin-top: 40px;
+    padding: 0px 100px;
+}
+.bg-e-discovery-service .hd h2
+{
+    margin-top: 150px;
+    color: #548235;
+    font-size: 30px;
+}
+
+.bg-e-discovery-service .overley
+{
+    background-color: rgba(0, 0, 0, 0.686);
+}
+.bg-e-discovery-service .hd_pra
+{
+   
+    color: white;
+    width: 100%;
+}
+.bg-e-discovery-service .hd_pra ul{}
+.bg-e-discovery-service .hd_pra ul li{
+    padding: 20px 110px;
+    line-height: 40px;
+}
+
+}
+.bg-e-discovery-service .hd_pra ul li i{ font-size: 14px;padding-right: 10px;}
+
+.sci-bg {
+    position: relative;
+    background-image: url(../img/support-staff-recruiting.jpg);
+    background-size: 100% auto;
+    background-position: center;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.sci-bg .container {
+    display: flex;
+    flex-direction:row-reverse;
+    justify-content: space-between;
+    padding: 7.3rem 2rem;
+}
+.sci-bg .overley .content-area .title {
+    font-size: 3.2rem;
+    line-height: 3.6rem;
+    font-style: italic;
+    padding-right: 8rem;
+}
+@media (min-width: 400px) {
+    .bg-e-discovery-service .row {
+        padding: 0px 60px;
+    }
+    .icon-copy-block-wrap {
+        flex-direction: column;
+    }
+    .job-header .location {
+        padding: 0px;
+    }
+    .bg-e-discovery-service .hd_pra ul li {
+        padding: 0px;}
+    .bg-e-discovery-service .hd h2 {
+        margin-top: 50px;}
+    .bg-outsourcing .row-text {
+        padding: 0px;
+    }
+    .resources .header-carousel.flickity-enabled .carousel-cell {
+        height: 67rem;
+    }
+    .site-header img {
+        display: none;
+    }
+    .site-header p {
+        margin-left: 0!important;
+    }
+    .attorney-recruiting .row
+    {
+        margin-top: 0px;
+        flex-direction: column;
+    }
+    .attorney-recruiting {height: 750px;}
+    .attorney-recruiting .hd h2,h4 {
+        padding-top: 0px;
+        margin: 20px 0px 0px 0px;
+    }
+    .attorney-recruiting .column1{
+        width: 100%;
+    }
+    .attorney-recruiting .column2{
+        width: 100%;
+    }
+    .attorney-recruiting .column3{
+        width: 100%;
+    }
+    .attorney-recruiting .row
+    {
+        margin-top: 0px;
+        flex-direction: column;
+    }
+    .bg-legal-talent {height: 750px;}
+    .bg-legal-talent .hd h2,h4 {
+        padding-top: 0px;
+        margin: 20px 0px 0px 0px;
+    }
+    .bg-legal-talent .column1{
+        width: 100%;
+    }
+    .bg-legal-talent .column2{
+        width: 100%;
+    }
+    .bg-legal-talent .column3{
+        width: 100%;
+    }
+    .bg-legal-talent .row
+    {
+        margin-top: 0px;
+        flex-direction: column;
+    }
+    .sci-bg .content-area {
+        width: 100%!important;
+    }
+    .bg-outsourcing .hd h2 {
+        margin-top: 150px;}
+}
+@media (min-width: 761px) {
+    .header-nav a {
+        line-height: 5rem;
+        padding: 0 5.5rem;
+    }
+    .site-header img {
+        display: none;
+    }
+    .attorney-recruiting {height: 600px;}
+    .attorney-recruiting .row
+    {
+        margin-top: 40px;
+        flex-direction: row;
+    }
+}
+@media (min-width: 932px) {
+    .bg-e-discovery-service .row
+{
+    margin-top: 40px;
+    padding: 0px 100px;
+}
+    .icon-copy-block-wrap {
+        flex-direction: row;
+    }
+    .job-header .location {
+        padding: 0px 200px;
+    }
+    .bg-e-discovery-service .hd_pra ul li {
+        padding: 20px 110px;}
+    .bg-e-discovery-service .hd h2 {
+        margin-top: 150px;}
+    .bg-outsourcing .hd h2 {
+        margin-top: 200px;}
+    .bg-outsourcing .row-text {
+        padding: 0px 200px;
+    }
+    .sci-bg .content-area {
+        width: 53%!important;
+    }
+    .attorney-recruiting .row
+    {
+        margin-top: 40px;
+        flex-direction: row;
+    }
+    .attorney-recruiting {height: 600px;}
+    .attorney-recruiting .hd h2 {
+        padding-top: 120px;
+        margin: 24px 0px;
+    }
+    .attorney-recruiting .hd h4 {
+        margin: 24px 0px;
+    }
+    .attorney-recruiting .column1{
+        width: 300px;
+    }
+    .attorney-recruiting .column2{
+        width: 300px;
+    }
+    .attorney-recruiting .column3{
+        width: 300px;
+    }
+    .attorney-recruiting .row
+    {
+        margin-top: 40px;
+        flex-direction: row;
+    }
+    .bg-legal-talent {height: 600px;}
+    .bg-legal-talent .hd h2 {
+        padding-top: 120px;
+        margin: 24px 0px;
+    }
+    .bg-legal-talent .hd h4 {
+        margin: 24px 0px;
+    }
+    .bg-legal-talent .column1{
+        width: 300px;
+    }
+    .bg-legal-talent .column2{
+        width: 300px;
+    }
+    .bg-legal-talent .column3{
+        width: 300px;
+    }
+    .bg-legal-talent .row
+    {
+        margin-top: 40px;
+        flex-direction: row;
+    }
+    .site-header p {
+        margin-left: -470px;
+    }
+    .site-header img {
+        display: block;
+    }
+    .site-logo-link{
+        display: flex;
+        flex-direction: row;
+    }
+    /* buttons*/
+    [class^='button'] {
+        width: auto;
+        padding: 1em 2em .75em 2em; /* 1em 2em; */
+        display: inline-block;
+        font-size: 1.2rem;
+        line-height: 2;
+        min-width: 184px;
+    }
+    a.apply {
+        padding: 0 7rem;
+        margin: 0 auto;
+        display: inline-block;
+    }
+    .site-logo {
+        max-width: 188px;
+    }
+    .site-nav-wrap {
+        width: 100%;
+        position: relative;
+        display: block !important;
+        background-color: inherit;
+    }
+    .site-header.sticky {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .site-nav-wrap .utility-nav, .site-nav-wrap .sub-nav, .nav-cta, .mobile-nav-button {
+        display: none;
+    }
+    .id-row .utility-nav {
+        display: block;
+        visibility: visible;
+    }
+    .id-row .utility-nav > ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    .id-row .utility-nav li {
+        display: block;
+    }
+    .main-nav {
+        display: flex;
+        align-items: center;
+        padding: 15px 3rem;
+    }
+    .main-nav-links {
+        display: inline-block;
+        max-width: 80%;
+    }
+    .main-nav-links li:first-of-type a {
+        padding-left: 0;
+    }
+    .main-nav-links li {
+        display: inline-block;
+    }
+    .main-nav-links li a
+    {
+        font-size: 17px;
+    }
+    .main-nav-links > li > a {
+        border-bottom: none;
+        position: relative;
+    }
+    }
+    .main-nav-links [data-section="eq-legal-consulting"] a:first-of-type {
+        padding-left: 0px!important;
+    }
+    .main-nav .contact-us {
+        background-color: #44525F;
+        color: #D5D9DB;
+        font-size: 1.2rem;
+        padding: 0.8em 2.2em 0.5em 2.2em; /*0.8em 2.2em;*/
+        float: right;
+        max-width: 20%;
+        margin: auto 0 auto auto;
+        transition: .3s all ease-in-out;
+    }
+    .main-nav .contact-us:hover, .main-nav .contact-us:focus {
+        border-color: ##44525F;
+        color: ##44525F;
+        background-color: #CDCDCD;
+    }
+    .main-nav-links > li:hover > .sub-nav {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        background-color: #fff;
+        padding: 0 3rem;
+        justify-content: space-evenly;
+    }
+    .main-nav .active-nav .sub-nav li:first-of-type a {
+        padding-left: 0rem;
+    }
+    .main-nav .sub-nav a {
+        color: #5C6D7C;
+        font-size: 1.2rem;
+        line-height: 1.5em;
+        padding: 1rem 2rem;
+    }
+    .main-nav .sub-nav a:hover, .main-nav .sub-nav a.active, .main-nav .sub-nav a:active {
+        color: #36414C;
+    }
+    .main-nav .sub-nav a.active {
+        color: #018FB5;
+        -webkit-font-smoothing: antialiased;
+    }
+    .main-nav .sub-nav a.active, .main-nav .sub-nav a:hover, .main-nav .sub-nav a:focus {
+        font-weight: 900;
+    }
+  
+    /* Page header */
+    .page-header {
+        padding: 10rem 2rem 13rem;
+    }
+    .page-header .header-logo {
+        margin-top: 5rem;
+    }
+    .page-header .title, .page-header p {
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .page-header .title {
+        margin-bottom: 1.6rem;
+    }
+    .page-header p:last-of-type {
+        margin-bottom: 6rem;
+    }
+    .branch__basics .location-header p:last-of-type {
+        margin-bottom: 0;
+    }
+    .page-header .job-search-inner {
+        display: flex;
+        justify-content: center;
+        max-width: 75rem;
+        margin: 0 auto;
+    }
+    .page-header .job-search-inner .form-control {
+        margin-bottom: 0;
+    }
+    .page-header .job-search-inner > div {
+        width: 100%;
+    }
+    .search .page-header .read-more__link-wrap {
+        margin-top: -4rem;
+        margin-bottom: 4rem;
+    } 
+    .icon-copy-block-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .icon-copy-block-wrap .block {
+        max-width: 306px;
+        margin: 0 5rem;
+    }
+    .sci-bg .overley .content-area .title {
+        font-size: 3.2rem;
+        line-height: 3.6rem;
+        font-style: italic;
+        padding-right: 8rem;}
+
+    .sci-bg .image-area {
+        width: 39.4%;
+        padding: 0 !important;
+    }
+    .sci-bg .content-area {
+        width: 53%;
+        padding: 0;
+    }
+    .sci-bg .content-area .title {
+        margin-top: 0;
+    }
+    .sci-bg   .hd-pra
+    {
+        color: white;
+    }
+    .sci-bg .pra, .pra-1, .pra-2, .pra-3
+    {
+        display: flex;
+    }
+    .sci-bg  .pra i, .pra-1 i, .pra-2 i, .pra-3 i
+    {
+        font-size: 6px;
+        transform: translate(-15px, 25px);
+    }
+    .sci-bg .pra p, .pra-1 p, .pra-2 p, .pra-3 p
+    {
+        font-size: 15px;
+    }
+    .half-copy-right .content {
+        padding: 16.9rem 8.4rem 23.5rem 41rem;
+        max-width: 102rem;
+        margin: 0 auto;
+    }
+    
+  
+    /* CTA Blocks */
+    .cta-block-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cta-block {
+        max-width: 49%;
+    }
+    .cta-main {
+        max-width: 1170px;
+        margin: 10rem auto;  /* margin: 2rem auto 0;*/
+    }
+    .cta-main p {
+        max-width: 500px;
+        margin: 0 auto 3rem;
+    }
+    .cta-main a + a {
+        margin: 0 1rem!important;
+    }
+    
+	/*Commented for new design
+    .profile-facets {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 6rem;
+    }
+    .profile-facets > div, .profile-facets > a {
+        width: 19%;
+        margin: 0;
+    }*/
+
+   
+   .file-upload-label{
+    width: 200px;
+    padding-top: 20px;
+   }
+  
+    /*footer */
+    ul.footer-main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: stretch;
+        padding: 1rem;
+    }
+    .footer-main-nav > li {
+        flex-grow: 1;
+        flex-basis: 0;
+        min-width: 20%;
+        padding: 0 2rem 2rem;
+    }
+    .site-footer .subnav {
+        display: block;
+    }
+    .site-footer .subnav a {
+        font-size: 1.3rem;
+        line-height: 3rem;
+        font-weight: 300;
+    }
+    .footer-cta {
+        text-align: center;
+        min-width: 100%;
+    }
+    ul.footer-utility-nav {
+        display: block;
+        /*! justify-content: space-between; */
+        /*! align-content: stretch; */
+        padding: 2rem 2rem 0.5rem;
+        margin-top: 0px;
+        text-transform: uppercase;
+    }
+    .footer-main-nav a.title {
+        background: none;
+        border: none;
+    }
+    .footer-cta .title {
+        margin-top: 0;
+        padding-top: 2rem;
+    }
+    .site-footer .social-nav {
+        margin-top: 1.6rem;
+    }
+    .site-footer .copyright-wrap {
+        text-align: center;
+    }
+    .site-footer .copyright, .site-footer .legal-nav {
+        margin-top: 0;
+    }
+    .site-footer .copyright {
+        display: inline-block;
+    }
+    .site-footer .legal-nav {
+        display: inline-block;
+    }
+    .site-footer .legal-nav a {
+        border: none;
+        padding: 0;
+        text-transform: none;
+    }
+    .site-footer .legal-nav > li {
+        white-space: nowrap;
+        padding: 0 1rem;
+    }
+    .site-footer hr {
+        background-color: #c8d2db;
+        max-width: none;
+    }
+    .site-footer .our-brands {
+        text-align: center;
+        padding-top: 3.4rem;
+    }
+    .site-footer .our-brands small{
+        font-size: 100%;
+        
+    }
+    .site-footer .our-brands h2 {
+        margin-right: 4rem;
+    }
+    .site-footer .our-brands h3, .site-footer .brand-nav {
+        display: inline-block;
+    }
+    .site-footer .brand-nav li {
+        padding: 0 2rem;
+    }
+    .site-footer {
+        padding-bottom: 0;
+    }
+} /* end media query */
+section.in-the-news, section.press-room {
+    max-width: 770px;
+    margin: 1rem auto;
+}
+section.in-the-news header, section.press-room header {
+    text-align: center;
+}
+.gptw {
+    color: #3C3C3C;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1.2rem;
+    font-weight: 100;
+    max-width: 60rem;
+    line-height: 1.8;
+    margin-bottom: 6rem;
+    display: none;
+}
+.gptw img {
+    float: left;
+    margin-right: 2rem;
+}
+.gptw p {
+    padding-top: 0.6rem;
+}
+.site-header img {
+    width: 25px;
+    height: 25px;
+    margin: 13px;
+}
+.gap{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+.gap h3
+{
+ margin-top: 40px;
+ 
+}
+.gap p
+{
+    margin-top: -10px;
+    color: #46AFCE;
+    font-size: 15px;
+}
+.contact
+{
+    width: 100%;
+    height: 400px;
+    background: url(../img/contact-background.jpg);
+    background-size: cover;
+    text-align: center;
+    
+    
+}
+.contact .hed h2
+{
+    font-family: "baskerville-urw", serif;
+    position: relative;
+    display: inline-block;
+    font-style: italic;
+    font-size: 4.5rem;
+    line-height: 5.1rem;
+}
+
+.contact .head h2
+{
+ color:#548235 ;
+ font-size: 45px;
+}
+.contact .body
+{
+    margin-top: -20px;
+}
+.contact .body p
+{
+    color: #000000;
+}
+/*SCFI FOrm*/
+/* job application header */
+.job-header {
+    padding: 2.2rem;
+    text-align: center;
+    background: #fff;
+}
+.job-header h1 {
+    color: #778793;
+    margin-bottom: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+.job-header .location {
+    font-style: italic;
+}
+.job-header .position-details {
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    margin-top: 2.4rem;
+}
+.icon-copy-block-wrap{
+    background-color:#fff;
+}
+.site-header p{
+	margin-left: -470px;
+}
+.icon-copy-block-wrap .block {
+    text-align: center;
+    margin: 2.8rem auto;
+}
+.form-field input, .dropdown-field select {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 0;
+    border-radius: 0;
+    line-height: 3em;
+    padding: 0 2rem;
+    width: 100%;
+}
+.form-field {
+    margin: 2rem 0;
+}
+.form-field input[type="checkbox"] {
+    width: auto;
+    display: inline;
+    margin-right: 5px;
+    margin-top: 1rem;
+}
+.file-select {
+    cursor: pointer;
+    background-color: #fff;
+    background-image: url(/~/media/AdeccoGroup/Brands/SpecialCounsel Brand/USA/images/icons/arrow-down-blue.jpg);
+    background-position: center right 2rem;
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.5rem;
+    line-height: 3em;
+    padding: 0 2rem;}
+.scfCustomFileUploadGeneralPanel .file-select {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 3em;
+    padding: 0 2rem;
+}
+.form-field input, .dropdown-field select {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 0;
+    border-radius: 0;
+    line-height: 3em;
+    padding: 0 2rem;
+    width: 100%;
+}
+.form-field input, .form-field select, .form-field textarea {
+    border: 1px solid #D1D1D1;}
+
+.scfForm {
+    max-width: 41rem;
+    margin: 41px auto -2rem;
+}
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+/* Forms */
+.page-main .scfForm {
+    font-family: "poppins", sans-serif;
+}
+.page-main .tel-consent-details {
+    padding-left: 1rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin: 2rem 0 3rem;
+} 
+.page-main .tel-consent-details ol {
+    border-left: 2px solid #5C6D7C;
+    display: none;
+}
+
+
+.scfSubmitButton {
+    border: 0;
+    border-radius: 3rem;
+    text-transform: uppercase;
+    background-color: #00A6CC;
+    color: #fff;
+    font-size: 1.2rem;
+    letter-spacing: .1em;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 700;
+    padding: 1.5em 0;
+    width: 100%;
+    margin-top: 2rem;
+    cursor: pointer;
+	margin-bottom:50px;
+}
+.resume-section{
+	display:flex;
+	flex-direction: row;
+}
